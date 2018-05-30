@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# 
+# Start of session at: Fri Jan 12 18:11:19 2018
+# Process ID: 12376
+# Current directory: F:/ax7350/demo/ps_timer/ps_timer.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: F:/ax7350/demo/ps_timer/ps_timer.sdk/webtalk/webtalk.log
+# Journal file: F:/ax7350/demo/ps_timer/ps_timer.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

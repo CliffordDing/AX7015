@@ -1,0 +1,447 @@
+11:14:53 INFO  : Registering command handlers for SDK TCF services
+11:14:53 INFO  : Launching XSCT server: xsct.bat -interactive F:\ax7350\demo\ps_hello\ps_hello.sdk\temp_xsdb_launch_script.tcl
+11:14:57 INFO  : XSCT server has started successfully.
+11:14:57 INFO  : Successfully done setting XSCT server connection channel  
+11:15:00 INFO  : Successfully done setting SDK workspace  
+11:15:00 INFO  : Processing command line option -hwspec F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper.hdf.
+13:15:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:15:47 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:15:47 INFO  : 'jtag frequency' command is executed.
+13:15:47 INFO  : Sourcing of 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:15:47 INFO  : Context for 'APU' is selected.
+13:15:47 INFO  : Hardware design information is loaded from 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:15:47 INFO  : 'configparams force-mem-access 1' command is executed.
+13:15:47 INFO  : Context for 'APU' is selected.
+13:15:47 INFO  : 'stop' command is executed.
+13:15:47 INFO  : 'ps7_init' command is executed.
+13:15:47 INFO  : 'ps7_post_config' command is executed.
+13:15:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:15:47 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:15:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:15:48 INFO  : The application 'F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:15:48 INFO  : 'configparams force-mem-access 0' command is executed.
+13:15:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:15:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:15:48 INFO  : 'con' command is executed.
+13:15:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+13:15:48 INFO  : Launch script is exported to file 'F:\ax7350\demo\ps_hello\ps_hello.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hello.elf_on_local.tcl'
+13:16:09 INFO  : Disconnected from the channel tcfchan#1.
+13:16:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:16:10 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:16:10 INFO  : 'jtag frequency' command is executed.
+13:16:10 INFO  : Sourcing of 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:16:10 INFO  : Context for 'APU' is selected.
+13:16:11 INFO  : Hardware design information is loaded from 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:16:11 INFO  : 'configparams force-mem-access 1' command is executed.
+13:16:11 INFO  : Context for 'APU' is selected.
+13:16:11 INFO  : 'stop' command is executed.
+13:16:12 INFO  : 'ps7_init' command is executed.
+13:16:12 INFO  : 'ps7_post_config' command is executed.
+13:16:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:16:12 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:16:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:16:12 INFO  : The application 'F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:16:12 INFO  : 'configparams force-mem-access 0' command is executed.
+13:16:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:16:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:16:12 INFO  : 'con' command is executed.
+13:16:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+13:16:12 INFO  : Launch script is exported to file 'F:\ax7350\demo\ps_hello\ps_hello.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hello.elf_on_local.tcl'
+13:21:00 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1515648057598,  Project:1515489396640
+13:21:00 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:21:01 INFO  : Copied contents of F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+13:21:03 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:21:08 INFO  : 
+13:21:08 INFO  : Updating hardware inferred compiler options for hello.
+13:21:08 INFO  : Clearing existing target manager status.
+13:21:11 INFO  : Closing and re-opening the MSS file of ther project hello_bsp
+13:21:11 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:21:13 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:34:49 INFO  : Disconnected from the channel tcfchan#2.
+13:34:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:34:51 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:34:51 INFO  : 'jtag frequency' command is executed.
+13:34:51 INFO  : Sourcing of 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:34:51 INFO  : Context for 'APU' is selected.
+13:34:51 INFO  : Hardware design information is loaded from 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:34:51 INFO  : 'configparams force-mem-access 1' command is executed.
+13:34:51 INFO  : Context for 'APU' is selected.
+13:34:51 INFO  : 'stop' command is executed.
+13:34:51 INFO  : 'ps7_init' command is executed.
+13:34:51 INFO  : 'ps7_post_config' command is executed.
+13:34:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:34:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:34:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:34:51 INFO  : The application 'F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:34:51 INFO  : 'configparams force-mem-access 0' command is executed.
+13:34:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:34:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:34:51 INFO  : 'con' command is executed.
+13:34:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+13:34:51 INFO  : Launch script is exported to file 'F:\ax7350\demo\ps_hello\ps_hello.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hello.elf_on_local.tcl'
+13:35:23 INFO  : Disconnected from the channel tcfchan#3.
+13:35:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:35:24 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:35:24 INFO  : 'jtag frequency' command is executed.
+13:35:24 INFO  : Sourcing of 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:35:24 INFO  : Context for 'APU' is selected.
+13:35:25 INFO  : Hardware design information is loaded from 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:35:25 INFO  : 'configparams force-mem-access 1' command is executed.
+13:35:25 INFO  : Context for 'APU' is selected.
+13:35:25 INFO  : 'stop' command is executed.
+13:35:25 INFO  : 'ps7_init' command is executed.
+13:35:25 INFO  : 'ps7_post_config' command is executed.
+13:35:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:35:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:26 INFO  : The application 'F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:35:26 INFO  : 'configparams force-mem-access 0' command is executed.
+13:35:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:35:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:26 INFO  : 'con' command is executed.
+13:35:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+13:35:26 INFO  : Launch script is exported to file 'F:\ax7350\demo\ps_hello\ps_hello.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hello.elf_on_local.tcl'
+13:35:37 INFO  : Disconnected from the channel tcfchan#4.
+13:35:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:35:38 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:35:38 INFO  : 'jtag frequency' command is executed.
+13:35:38 INFO  : Sourcing of 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:35:38 INFO  : Context for 'APU' is selected.
+13:35:38 INFO  : System reset is completed.
+13:35:41 INFO  : 'after 3000' command is executed.
+13:35:42 INFO  : Context for 'APU' is selected.
+13:35:42 INFO  : Hardware design information is loaded from 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:35:42 INFO  : 'configparams force-mem-access 1' command is executed.
+13:35:42 INFO  : Context for 'APU' is selected.
+13:35:42 INFO  : 'ps7_init' command is executed.
+13:35:42 INFO  : 'ps7_post_config' command is executed.
+13:35:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:42 INFO  : The application 'F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:35:42 INFO  : 'configparams force-mem-access 0' command is executed.
+13:35:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:35:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:42 INFO  : 'con' command is executed.
+13:35:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+13:35:42 INFO  : Launch script is exported to file 'F:\ax7350\demo\ps_hello\ps_hello.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hello.elf_on_local.tcl'
+13:50:39 INFO  : Disconnected from the channel tcfchan#5.
+13:50:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:50:40 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:50:40 INFO  : 'jtag frequency' command is executed.
+13:50:40 INFO  : Sourcing of 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:50:40 INFO  : Context for 'APU' is selected.
+13:50:40 INFO  : System reset is completed.
+13:50:43 INFO  : 'after 3000' command is executed.
+13:50:43 INFO  : Context for 'APU' is selected.
+13:50:43 INFO  : Hardware design information is loaded from 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:50:43 INFO  : 'configparams force-mem-access 1' command is executed.
+13:50:43 INFO  : Context for 'APU' is selected.
+13:50:44 INFO  : 'ps7_init' command is executed.
+13:50:44 INFO  : 'ps7_post_config' command is executed.
+13:50:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:44 INFO  : The application 'F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:50:44 INFO  : 'configparams force-mem-access 0' command is executed.
+13:50:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:50:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:44 INFO  : 'con' command is executed.
+13:50:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+13:50:44 INFO  : Launch script is exported to file 'F:\ax7350\demo\ps_hello\ps_hello.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hello.elf_on_local.tcl'
+13:54:22 INFO  : Disconnected from the channel tcfchan#6.
+13:54:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:54:24 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:54:24 INFO  : 'jtag frequency' command is executed.
+13:54:24 INFO  : Sourcing of 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:54:24 INFO  : Context for 'APU' is selected.
+13:54:24 INFO  : System reset is completed.
+13:54:27 INFO  : 'after 3000' command is executed.
+13:54:27 INFO  : Context for 'APU' is selected.
+13:54:27 INFO  : Hardware design information is loaded from 'F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:54:27 INFO  : 'configparams force-mem-access 1' command is executed.
+13:54:27 INFO  : Context for 'APU' is selected.
+13:54:27 INFO  : 'ps7_init' command is executed.
+13:54:27 INFO  : 'ps7_post_config' command is executed.
+13:54:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:54:27 INFO  : The application 'F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:54:27 INFO  : 'configparams force-mem-access 0' command is executed.
+13:54:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/ax7350/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/ax7350/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:54:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:54:28 INFO  : 'con' command is executed.
+13:54:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+13:54:28 INFO  : Launch script is exported to file 'F:\ax7350\demo\ps_hello\ps_hello.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hello.elf_on_local.tcl'
+14:47:58 INFO  : Disconnected from the channel tcfchan#7.
+14:48:00 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:04:26 INFO  : Registering command handlers for SDK TCF services
+15:04:26 INFO  : Launching XSCT server: xsct.bat -interactive F:\ax7015\demo\ps_hello\ps_hello.sdk\temp_xsdb_launch_script.tcl
+15:04:28 INFO  : XSCT server has started successfully.
+15:04:29 INFO  : Successfully done setting XSCT server connection channel  
+15:04:29 INFO  : Successfully done setting SDK workspace  
+15:05:44 INFO  : Copied contents of F:\ax7015\demo\ps_hello\ps_hello.sdk\design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+15:05:46 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:05:49 INFO  : 
+15:05:50 INFO  : Updating hardware inferred compiler options for hello.
+15:05:50 INFO  : Clearing existing target manager status.
+15:05:50 WARN  : Given IPC port value is invalid. Using default port 2350
+15:05:50 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+15:05:52 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+15:05:52 INFO  : Closing and re-opening the MSS file of ther project hello_bsp
+15:05:53 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:05:55 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:15:55 INFO  : Apm configuration has been updated and stored to 'F:\ax7015\demo\ps_hello\ps_hello.sdk\design_1_wrapper_hw_platform_0\apmconfigs\apm_default.json' for the project 'design_1_wrapper_hw_platform_0'
+15:16:17 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1520234177575,  Project:1520233512947
+15:16:17 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at F:\ax7015\demo\ps_hello\ps_hello.sdk\design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:16:19 INFO  : Copied contents of F:\ax7015\demo\ps_hello\ps_hello.sdk\design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+15:16:21 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:16:24 INFO  : 
+15:16:25 INFO  : Updating hardware inferred compiler options for hello.
+15:16:25 INFO  : Clearing existing target manager status.
+15:16:25 INFO  : Closing and re-opening the MSS file of ther project hello_bsp
+15:16:25 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:16:27 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+16:22:51 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1520238169459,  Project:1520234177575
+16:22:51 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at F:\ax7015\demo\ps_hello\ps_hello.sdk\design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+16:22:52 INFO  : Copied contents of F:\ax7015\demo\ps_hello\ps_hello.sdk\design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+16:22:54 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:22:57 INFO  : 
+16:22:58 INFO  : Updating hardware inferred compiler options for hello.
+16:22:58 INFO  : Clearing existing target manager status.
+16:22:58 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:23:00 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+16:55:13 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:30:27 INFO  : Launching XSCT server: xsct.bat -interactive F:\ax7015\demo\ps_hello\ps_hello.sdk\temp_xsdb_launch_script.tcl
+19:30:29 INFO  : XSCT server has started successfully.
+19:30:29 INFO  : Successfully done setting XSCT server connection channel  
+19:30:30 INFO  : Successfully done setting SDK workspace  
+19:30:34 INFO  : Registering command handlers for SDK TCF services
+19:30:34 INFO  : Processing command line option -hwspec F:/ax7015/demo/ps_hello/ps_hello.sdk/design_1_wrapper.hdf.
+19:31:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:31:23 INFO  : Jtag cable 'Digilent JTAG-HS1 210249854706' is selected.
+19:31:23 INFO  : 'jtag frequency' command is executed.
+19:31:23 INFO  : Sourcing of 'F:/ax7015/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:31:23 INFO  : Context for 'APU' is selected.
+19:31:23 INFO  : System reset is completed.
+19:31:26 INFO  : 'after 3000' command is executed.
+19:31:26 INFO  : Context for 'APU' is selected.
+19:31:26 INFO  : Hardware design information is loaded from 'F:/ax7015/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+19:31:26 INFO  : 'configparams force-mem-access 1' command is executed.
+19:31:26 INFO  : Context for 'APU' is selected.
+19:31:27 INFO  : 'ps7_init' command is executed.
+19:31:27 INFO  : 'ps7_post_config' command is executed.
+19:31:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:31:27 INFO  : The application 'F:/ax7015/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:31:27 INFO  : 'configparams force-mem-access 0' command is executed.
+19:31:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/ax7015/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854706"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854706"} -index 0
+loadhw -hw F:/ax7015/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854706"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854706"} -index 0
+dow F:/ax7015/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:31:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:31:27 INFO  : 'con' command is executed.
+19:31:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854706"} -index 0
+con
+----------------End of Script----------------
+
+19:31:27 INFO  : Launch script is exported to file 'F:\ax7015\demo\ps_hello\ps_hello.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hello.elf_on_local.tcl'
+19:31:40 INFO  : Disconnected from the channel tcfchan#1.
+19:31:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:31:41 INFO  : Jtag cable 'Digilent JTAG-HS1 210249854706' is selected.
+19:31:41 INFO  : 'jtag frequency' command is executed.
+19:31:41 INFO  : Sourcing of 'F:/ax7015/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:31:41 INFO  : Context for 'APU' is selected.
+19:31:41 INFO  : System reset is completed.
+19:31:44 INFO  : 'after 3000' command is executed.
+19:31:44 INFO  : Context for 'APU' is selected.
+19:31:45 INFO  : Hardware design information is loaded from 'F:/ax7015/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+19:31:45 INFO  : 'configparams force-mem-access 1' command is executed.
+19:31:45 INFO  : Context for 'APU' is selected.
+19:31:46 INFO  : 'ps7_init' command is executed.
+19:31:46 INFO  : 'ps7_post_config' command is executed.
+19:31:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:31:46 INFO  : The application 'F:/ax7015/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:31:46 INFO  : 'configparams force-mem-access 0' command is executed.
+19:31:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/ax7015/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854706"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854706"} -index 0
+loadhw -hw F:/ax7015/demo/ps_hello/ps_hello.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854706"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854706"} -index 0
+dow F:/ax7015/demo/ps_hello/ps_hello.sdk/hello/Debug/hello.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:31:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:31:46 INFO  : 'con' command is executed.
+19:31:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210249854706"} -index 0
+con
+----------------End of Script----------------
+
+19:31:46 INFO  : Launch script is exported to file 'F:\ax7015\demo\ps_hello\ps_hello.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hello.elf_on_local.tcl'
+19:31:53 INFO  : Disconnected from the channel tcfchan#2.
+19:32:09 INFO  : Launching XSCT server: xsct.bat -interactive F:\ax7015\demo\ps_hello\ps_hello.sdk\temp_xsdb_launch_script.tcl
+19:32:11 INFO  : XSCT server has started successfully.
+19:32:11 INFO  : Successfully done setting XSCT server connection channel  
+19:32:11 INFO  : Successfully done setting SDK workspace  
+19:32:15 INFO  : Registering command handlers for SDK TCF services
+19:32:15 INFO  : Processing command line option -hwspec F:/ax7015/demo/ps_hello/ps_hello.sdk/design_1_wrapper.hdf.

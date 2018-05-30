@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Mar  1 16:10:16 2018
+# Process ID: 8364
+# Current directory: f:/ax7015/demo/ibert_test/ibert_ex
+# Command line: vivado.exe -notrace -source f:/ax7015/demo/ibert_test/ibert_test.srcs/sources_1/ip/ibert/ibert_ex.tcl
+# Log file: f:/ax7015/demo/ibert_test/ibert_ex/vivado.log
+# Journal file: f:/ax7015/demo/ibert_test/ibert_ex\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source f:/ax7015/demo/ibert_test/ibert_test.srcs/sources_1/ip/ibert/ibert_ex.tcl -notrace
+update_compile_order -fileset sources_1
+file mkdir f:/ax7015/demo/ibert_test/ibert_ex/ibert_ex.srcs/constrs_1
+file mkdir f:/ax7015/demo/ibert_test/ibert_ex/ibert_ex.srcs/constrs_1/new
+close [ open f:/ax7015/demo/ibert_test/ibert_ex/ibert_ex.srcs/constrs_1/new/pins.xdc w ]
+add_files -fileset constrs_1 f:/ax7015/demo/ibert_test/ibert_ex/ibert_ex.srcs/constrs_1/new/pins.xdc
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {f:/ax7015/demo/ibert_test/ibert_ex/ibert_ex.runs/impl_1/example_ibert.bit} [get_hw_devices xc7z015_1]
+current_hw_device [get_hw_devices xc7z015_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z015_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property PROGRAM.FILE {f:/ax7015/demo/ibert_test/ibert_ex/ibert_ex.runs/impl_1/example_ibert.bit} [get_hw_devices xc7z015_1]
+program_hw_devices [get_hw_devices xc7z015_1]
+refresh_hw_device [lindex [get_hw_devices xc7z015_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property PROGRAM.FILE {f:/ax7015/demo/ibert_test/ibert_ex/ibert_ex.runs/impl_1/example_ibert.bit} [get_hw_devices xc7z015_1]
+program_hw_devices [get_hw_devices xc7z015_1]
+refresh_hw_device [lindex [get_hw_devices xc7z015_1] 0]
+detect_hw_sio_links
+set xil_newScan [create_hw_sio_scan -description {Scan 0} 2d_full_eye  [lindex [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210249854706/1_1_0/IBERT/Quad_112/MGT_X0Y3/TX->localhost:3121/xilinx_tcf/Digilent/210249854706/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 0 ]]
+run_hw_sio_scan [get_hw_sio_scans $xil_newScan]

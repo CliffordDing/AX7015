@@ -1,0 +1,34 @@
+!SESSION 2018-03-05 15:03:24.196 -----------------------------------------------
+eclipse.buildId=2017.4
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 2 0 2018-03-05 15:03:43.111
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-03-05 15:03:43.111
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2018-03-05 15:03:43.887
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2018-03-05 15:03:43.887
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-05 15:03:50.444
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-05 15:03:50.445
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-05 15:03:51.509
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-05 15:03:51.510
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-05 15:03:51.511
+!MESSAGE XSCT Command: [setws F:/ax7015/demo/ps_hello], Thread: Thread-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-03-05 15:03:51.513
+!MESSAGE XSCT command with result: [setws F:/ax7015/demo/ps_hello], Result: [null, ]. Thread: Thread-14

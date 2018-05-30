@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# 
+# Start of session at: Wed Feb 28 16:02:51 2018
+# Process ID: 11588
+# Current directory: F:/ax7015/ps_net/ps_net.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: F:/ax7015/ps_net/ps_net.sdk/webtalk/webtalk.log
+# Journal file: F:/ax7015/ps_net/ps_net.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

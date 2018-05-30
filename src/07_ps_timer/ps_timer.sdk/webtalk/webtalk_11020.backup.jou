@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# 
+# Start of session at: Thu Jan 11 14:47:58 2018
+# Process ID: 11020
+# Current directory: F:/ax7350/demo/ps_hello/ps_hello.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: F:/ax7350/demo/ps_hello/ps_hello.sdk/webtalk/webtalk.log
+# Journal file: F:/ax7350/demo/ps_hello/ps_hello.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

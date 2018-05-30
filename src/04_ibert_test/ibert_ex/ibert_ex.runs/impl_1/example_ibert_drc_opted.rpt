@@ -1,0 +1,47 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Thu Mar  1 16:46:12 2018
+| Host         : Mei-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : report_drc -file example_ibert_drc_opted.rpt -pb example_ibert_drc_opted.pb -rpx example_ibert_drc_opted.rpx
+| Design       : example_ibert
+| Device       : xc7z015clg485-2
+| Speed File   : -2
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 2
++-----------+----------+------------------------------+------------+
+| Rule      | Severity | Description                  | Violations |
++-----------+----------+------------------------------+------------+
+| PDCN-2721 | Warning  | IBUFDS_GT_loads_clock_region | 1          |
+| ZPS7-1    | Warning  | PS7 block required           | 1          |
++-----------+----------+------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDCN-2721#1 Warning
+IBUFDS_GT_loads_clock_region  
+IBUFDS_GTE2 u_buf_q0_clk1 drives MMCME2_ADV u_ibert_core/inst/SYSCLK_DIVIDER.U_GT_MMCM in a different clock region and must do so using local routing resources which may negatively affect clock performance. Use CLOCK_DEDICATED_ROUTE set to FALSE to indicate this is intended.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

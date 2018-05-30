@@ -1,0 +1,8 @@
+14:23:43 **** Incremental Build of configuration Debug for project key_test_bsp_xgpio_intr_tapp_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+
+14:23:43 Build Finished (took 225ms)
+

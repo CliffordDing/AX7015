@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]F:\ax7015\demo\vdma_to_qspi_sd\vdma_to_qspi_sd.sdk\fsbl\Debug\fsbl.elf
+	F:\ax7015\demo\vdma_to_qspi_sd\vdma_to_qspi_sd.sdk\design_1_wrapper_hw_platform_1\design_1_wrapper.bit
+	F:\ax7015\demo\vdma_to_qspi_sd\vdma_to_qspi_sd.sdk\vdma_hdmi\Debug\vdma_hdmi.elf
+}

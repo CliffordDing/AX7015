@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="F:\ax7015\demo\pcie_hdmi_out\pcie_hdmi_out.sdk\test\Debug" key="bootgen_files_selection"/>
+	<item value="F:\ax7015\demo\pcie_hdmi_out\pcie_hdmi_out.sdk\fsbl\bootimage" key="zynq_flash_files_selection"/>
+	<item value="F:\ax7015\demo\pcie_hdmi_out\pcie_hdmi_out.sdk\fsbl\bootimage" key="last_stored_selection"/>
+</section>

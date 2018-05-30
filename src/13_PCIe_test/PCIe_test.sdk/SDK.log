@@ -1,0 +1,9 @@
+15:32:15 INFO  : Registering command handlers for SDK TCF services
+15:32:15 INFO  : Launching XSCT server: xsct.bat -interactive F:\ax7015\demo\PCIe_test\PCIe_test.sdk\temp_xsdb_launch_script.tcl
+15:32:17 INFO  : XSCT server has started successfully.
+15:32:18 INFO  : Successfully done setting XSCT server connection channel  
+15:32:18 INFO  : Successfully done setting SDK workspace  
+15:32:18 INFO  : Processing command line option -hwspec F:/ax7015/demo/PCIe_test/PCIe_test.sdk/design_1_wrapper.hdf.
+15:35:10 INFO  : Invoking Bootgen: bootgen -image fsbl.bif -arch zynq -o F:\ax7015\demo\PCIe_test\PCIe_test.sdk\fsbl\bootimage\BOOT.bin
+15:35:10 INFO  : Creating new bif file F:\ax7015\demo\PCIe_test\PCIe_test.sdk\fsbl\bootimage\fsbl.bif
+15:35:11 INFO  : Bootgen command execution is done.

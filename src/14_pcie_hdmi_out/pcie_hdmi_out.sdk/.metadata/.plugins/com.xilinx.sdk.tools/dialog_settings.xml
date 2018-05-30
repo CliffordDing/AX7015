@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="" key="PCIe_wrapper_hw_platform_0-offSet"/>
+	<item value="PCIe_wrapper_hw_platform_0" key="programflash.hwplatform"/>
+	<item value="qspi_single" key="PCIe_wrapper_hw_platform_0-flashType"/>
+	<item value="Auto Detect" key="PCIe_wrapper_hw_platform_0-device"/>
+	<item value="true" key="PCIe_wrapper_hw_platform_0-blankCheck"/>
+	<item value="Local" key="PCIe_wrapper_hw_platform_0-target"/>
+	<item value="F:\ax7015\demo\pcie_hdmi_out\pcie_hdmi_out.sdk\fsbl\bootimage\BOOT.bin" key="PCIe_wrapper_hw_platform_0-imgFile"/>
+	<item value="F:\ax7015\zynq_fsbl_flash.elf" key="PCIe_wrapper_hw_platform_0-fsblFile"/>
+	<item value="true" key="PCIe_wrapper_hw_platform_0-verifyFlash"/>
+</section>

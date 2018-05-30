@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]F:\ax7015\demo\pcie_hdmi_out\pcie_hdmi_out.sdk\fsbl\Debug\fsbl.elf
+	F:\ax7015\demo\pcie_hdmi_out\pcie_hdmi_out.sdk\PCIe_wrapper_hw_platform_0\PCIe_wrapper.bit
+	F:\ax7015\demo\pcie_hdmi_out\pcie_hdmi_out.sdk\test\Debug\test.elf
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="design_1_wrapper_hw_platform_1" key="programflash.hwplatform"/>
+	<item value="F:\ax7015\zynq_fsbl_flash.elf" key="design_1_wrapper_hw_platform_1-fsblFile"/>
+	<item value="false" key="design_1_wrapper_hw_platform_1-blankCheck"/>
+	<item value="Auto Detect" key="design_1_wrapper_hw_platform_1-device"/>
+	<item value="Local" key="design_1_wrapper_hw_platform_1-target"/>
+	<item value="qspi_single" key="design_1_wrapper_hw_platform_1-flashType"/>
+	<item value="true" key="design_1_wrapper_hw_platform_1-verifyFlash"/>
+	<item value="F:\ax7015\demo\vdma_to_qspi_sd\vdma_to_qspi_sd.sdk\fsbl\bootimage\BOOT.bin" key="design_1_wrapper_hw_platform_1-imgFile"/>
+	<item value="" key="design_1_wrapper_hw_platform_1-offSet"/>
+</section>

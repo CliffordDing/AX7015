@@ -1,0 +1,6 @@
+17:41:51 INFO  : Registering command handlers for SDK TCF services
+17:41:52 INFO  : Launching XSCT server: xsct.bat -interactive F:\ax7015\linux_base\linux_base.sdk\temp_xsdb_launch_script.tcl
+17:41:54 INFO  : XSCT server has started successfully.
+17:41:54 INFO  : Successfully done setting XSCT server connection channel  
+17:41:55 INFO  : Successfully done setting SDK workspace  
+17:41:55 INFO  : Processing command line option -hwspec F:/ax7015/linux_base/linux_base.sdk/design_1_wrapper.hdf.

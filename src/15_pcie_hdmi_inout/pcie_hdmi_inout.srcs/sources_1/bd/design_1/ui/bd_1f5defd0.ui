@@ -1,0 +1,94 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.6.11  2017-06-12 bk=1.3860 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port hdmi_i2c -pg 1 -y 60 -defaultsOSRD
+preplace port DDR -pg 1 -y 20 -defaultsOSRD
+preplace port hdmi_rstn -pg 1 -y 80 -defaultsOSRD
+preplace port hdmi_out_hs -pg 1 -y 160 -defaultsOSRD
+preplace port pcie_ref -pg 1 -y 120 -defaultsOSRD
+preplace port hdmi_in_de -pg 1 -y 60 -defaultsOSRD
+preplace port pcie_mgt -pg 1 -y 200 -defaultsOSRD
+preplace port hdmi_in_vs -pg 1 -y 100 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 40 -defaultsOSRD
+preplace port hdmi_out_de -pg 1 -y 140 -defaultsOSRD
+preplace port hdmi_out_clk -pg 1 -y 100 -defaultsOSRD
+preplace port hdmi_in_hs -pg 1 -y 80 -defaultsOSRD
+preplace port pcie_rst_n -pg 1 -y 140 -defaultsOSRD
+preplace port hdmi_in_clk -pg 1 -y 20 -defaultsOSRD
+preplace port hdmi_out_vs -pg 1 -y 180 -defaultsOSRD
+preplace portBus hdmi_in_data -pg 1 -y 40 -defaultsOSRD
+preplace portBus hdmi_out_data -pg 1 -y 120 -defaultsOSRD
+preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 2 -y 510 -defaultsOSRD
+preplace inst util_ds_buf_1 -pg 1 -lvl 2 -y 330 -defaultsOSRD
+preplace inst v_tc_0 -pg 1 -lvl 2 -y 770 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 4 -y 1030 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -y 330 -defaultsOSRD
+preplace inst v_tc_1 -pg 1 -lvl 2 -y 1020 -defaultsOSRD
+preplace inst axi_vdma_1 -pg 1 -lvl 3 -y 100 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -y 670 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -y 280 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 4 -y 220 -defaultsOSRD
+preplace inst axi_dynclk_0 -pg 1 -lvl 4 -y 80 -defaultsOSRD
+preplace inst xdma_0 -pg 1 -lvl 1 -y 500 -defaultsOSRD
+preplace inst v_vid_in_axi4s_0 -pg 1 -lvl 1 -y 120 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -y 870 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 4 -y 390 -defaultsOSRD
+preplace inst axi_interconnect_1 -pg 1 -lvl 4 -y 610 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -y 90 -defaultsOSRD
+preplace inst axi_interconnect_2 -pg 1 -lvl 4 -y 830 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 2 -y 230 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -y 500 -defaultsOSRD
+preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 1660
+preplace netloc processing_system7_0_DDR 1 3 3 1620 -30 NJ -30 2250J
+preplace netloc xlconstant_1_dout 1 0 2 60 740 400J
+preplace netloc v_axi4s_vid_out_0_vid_data 1 2 4 980 1170 NJ 1170 2140J 120 NJ
+preplace netloc v_vid_in_axi4s_0_video_out 1 1 2 410 0 930J
+preplace netloc axi_vdma_1_M_AXI_S2MM 1 3 1 1680
+preplace netloc axi_dynclk_0_PXL_CLK_O 1 1 5 510 1230 N 1230 NJ 1230 2150J 100 N
+preplace netloc v_axi4s_vid_out_0_vid_hsync 1 2 4 940 1290 NJ 1290 2180J 160 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 2 1080 1120 1570
+preplace netloc axi_vdma_0_M_AXI_MM2S 1 3 2 1740 1130 2100
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 3 520 1250 960 1250 1710
+preplace netloc pcie_rst_n_1 1 0 1 20J
+preplace netloc axi_vdma_0_M_AXIS_MM2S 1 1 4 530 1160 N 1160 NJ 1160 2110J
+preplace netloc CLK_IN_D_1 1 0 2 30J 280 470J
+preplace netloc xdma_0_axi_aclk 1 1 3 460J -10 1020J 0 1640
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 3 540 -20 1030 -10 1580
+preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 1700
+preplace netloc processing_system7_0_IIC_0 1 3 3 1650 0 NJ 0 2230J
+preplace netloc vid_vsync_0_1 1 0 1 80
+preplace netloc v_axi4s_vid_out_0_vid_active_video 1 2 4 970 1210 NJ 1210 2160J 140 NJ
+preplace netloc ps7_0_axi_periph_M01_AXI 1 1 3 560 1180 N 1180 1560J
+preplace netloc xdma_0_axi_aresetn 1 1 3 430 1220 1030J 1220 1720
+preplace netloc util_ds_buf_0_IBUF_OUT 1 0 3 70 1210 NJ 1210 930J
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 3 1 1670
+preplace netloc xlconstant_0_dout 1 0 2 50 730 410
+preplace netloc v_axi4s_vid_out_0_vtg_ce 1 1 2 550 1200 920
+preplace netloc processing_system7_0_FIXED_IO 1 3 3 1630 -10 NJ -10 2240J
+preplace netloc xdma_0_M_AXI 1 1 3 440J 1260 NJ 1260 1730J
+preplace netloc axi_interconnect_0_M00_AXI 1 2 3 1070 -20 NJ -20 2100J
+preplace netloc axi_gpio_0_GPIO 1 4 2 2110J 80 N
+preplace netloc S01_AXI_1 1 1 2 470 1150 990J
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 3 1 N
+preplace netloc xdma_0_pcie_mgt 1 1 5 420J 1280 NJ 1280 NJ 1280 2190J 200 NJ
+preplace netloc ps7_0_axi_periph_M05_AXI 1 1 3 570 1190 NJ 1190 1550J
+preplace netloc ps7_0_axi_periph_M04_AXI 1 2 2 1050 1130 1540
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 500 1240 1000 1240 1690
+preplace netloc v_vid_in_axi4s_0_vtiming_out 1 1 1 480
+preplace netloc v_tc_0_vtiming_out 1 1 2 540 1170 910
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1600
+preplace netloc axi_interconnect_2_M00_AXI 1 2 3 1070 1150 NJ 1150 2120J
+preplace netloc axi_interconnect_1_M00_AXI 1 2 3 1060 1140 NJ 1140 2130J
+preplace netloc vid_hsync_0_1 1 0 1 80
+preplace netloc v_axi4s_vid_out_0_vid_vsync 1 2 4 950 1200 NJ 1200 2170J 180 NJ
+preplace netloc processing_system7_0_FCLK_CLK1 1 0 4 80 720 450 -30 1040 -30 1610
+preplace netloc vid_io_in_clk_0_1 1 0 2 40J 980 N
+preplace netloc vid_data_0_1 1 0 1 80J
+preplace netloc vid_active_video_0_1 1 0 1 20J
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 2 1 1010
+preplace netloc processing_system7_0_FCLK_CLK2 1 1 3 490 1270 N 1270 1590J
+levelinfo -pg 1 0 240 740 1310 1920 2210 2270 -top -40 -bot 1320
+",
+}
+
